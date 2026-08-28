@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-ink pb-24 text-white lg:pb-0">
       <div className="container-site grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <Logo variant="light" className="h-14" />
+          <Logo variant="light" className="max-w-[260px]" />
           <p className="mt-5 max-w-sm text-lg leading-relaxed text-white/80">
             Building Dreams. Creating Spaces.
           </p>

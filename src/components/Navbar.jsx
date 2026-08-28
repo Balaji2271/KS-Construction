@@ -39,7 +39,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-site flex h-[76px] items-center justify-between lg:h-[88px]">
+      <div className="container-site flex h-[80px] items-center justify-between gap-4 lg:h-[92px]">
         <Link to="/" aria-label="KS Construction home" className="relative z-10 shrink-0">
           <Logo variant={darkHero && !open ? 'light' : 'dark'} />
         </Link>

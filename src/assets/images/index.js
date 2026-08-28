@@ -1,5 +1,4 @@
-import logo from './logo/ks-construction-logo.svg';
-import logoLight from './logo/ks-construction-logo-light.svg';
+import logo from './logo/ks-construction-logo.jpg';
 import heroVilla from './hero/villa-night.jpg';
 import aboutResidence from './about/modern-residence.jpg';
 import ctaDetail from './cta/construction-detail.jpg';
@@ -34,7 +33,6 @@ import galleryPlanning01 from './gallery/planning-01.jpg';
 
 export const images = {
   logo,
-  logoLight,
   hero: {
     villa: heroVilla,
   },
