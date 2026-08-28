@@ -16,14 +16,15 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
+    // HashRouter uses the URL hash for routes; only treat fragment ids as in-page anchors.
+    if (hash && /^#[A-Za-z][\w-]*$/.test(hash)) {
       const el = document.querySelector(hash);
       if (el) {
         el.scrollIntoView();
         return;
       }
     }
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [pathname, hash]);
 
   return null;

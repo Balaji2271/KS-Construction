@@ -16,7 +16,7 @@ export default function Button({
   className = '',
   ...props
 }) {
-  const classes = `${variants[variant] || variants.primary} ${className}`;
+  const classes = `relative z-[1] ${variants[variant] || variants.primary} ${className}`;
 
   if (to) {
     return (

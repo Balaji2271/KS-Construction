@@ -12,10 +12,10 @@ export default function Hero() {
       <img
         src={images.hero.villa}
         alt="Modern villa with warm architectural lighting"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/35" />
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/35" />
+      <div className="pointer-events-none absolute inset-0 bg-black/20" />
 
       <div className="container-site relative z-10 pb-24 pt-36 lg:pb-28 lg:pt-40">
         <motion.p

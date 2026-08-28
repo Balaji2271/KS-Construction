@@ -40,7 +40,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container-site flex h-[76px] items-center justify-between lg:h-[88px]">
-        <Link to="/" aria-label="KS Construction home" className="shrink-0">
+        <Link to="/" aria-label="KS Construction home" className="relative z-10 shrink-0">
           <Logo variant={darkHero && !open ? 'light' : 'dark'} />
         </Link>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
             <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
             {COMPANY.phoneDisplay}
           </a>
-          <Button to="/contact" className="uppercase tracking-[0.12em]">
+          <Button to="/contact" className="relative z-10 uppercase tracking-[0.12em]">
             Get a Quote
           </Button>
         </div>

@@ -15,7 +15,7 @@ export default function MobileContactBar() {
         </a>
         <Link
           to="/contact"
-          className="inline-flex min-h-12 items-center justify-center rounded-sm bg-gold text-base font-semibold text-ink"
+          className="relative z-10 inline-flex min-h-12 items-center justify-center rounded-sm bg-gold text-base font-semibold text-ink"
         >
           Get a Quote
         </Link>
