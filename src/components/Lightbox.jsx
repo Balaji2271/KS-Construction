@@ -64,7 +64,6 @@ export default function Lightbox({ items, index, onClose, onPrev, onNext }) {
           <span className="mt-1 block text-white/80">
             {index + 1} / {items.length}
             {item.category ? ` · ${item.category}` : ''}
-            {item.isSample ? ' · Sample image' : ''}
           </span>
         </figcaption>
       </figure>

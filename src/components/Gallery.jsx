@@ -21,9 +21,6 @@ export default function Gallery() {
           title="Spaces, details and construction"
           subtitle="A visual look at the kind of architecture and workmanship we aim to deliver."
         />
-        <p className="mt-4 max-w-3xl text-muted">
-          Sample images until KS Construction project photography is available.
-        </p>
         <div className="mt-8 flex flex-wrap gap-2">
           {GALLERY_FILTERS.map((item) => (
             <button
@@ -48,7 +45,7 @@ export default function Gallery() {
               >
                 <img
                   src={item.image}
-                  alt={`${item.title} (${item.category}${item.isSample ? ', sample image' : ''})`}
+                  alt={`${item.title} (${item.category})`}
                   className="h-40 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-56 lg:h-64"
                   loading="lazy"
                 />

@@ -16,16 +16,13 @@ export default function ProjectCard({ project }) {
           <span className="absolute left-4 top-4 bg-white/95 px-3 py-1 text-sm font-semibold text-ink">
             {project.category}
           </span>
-          {project.isSample ? (
-            <span className="absolute right-4 top-4 bg-gold px-3 py-1 text-sm font-semibold text-ink">
-              Sample
-            </span>
-          ) : null}
           <div className="absolute inset-x-0 bottom-0 p-5">
             <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-            <p className="mt-1 text-white/80">
-              {project.location} · {project.status}
-            </p>
+            {(project.location || project.status) && (
+              <p className="mt-1 text-white/80">
+                {[project.location, project.status].filter(Boolean).join(' · ')}
+              </p>
+            )}
             <span className="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-gold-light">
               View Project
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

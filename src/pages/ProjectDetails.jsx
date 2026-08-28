@@ -33,8 +33,9 @@ export default function ProjectDetails() {
     image,
     title: `${project.title} — image ${index + 1}`,
     category: project.category,
-    isSample: project.isSample,
   }));
+
+  const metaParts = [project.category, project.location, project.status].filter(Boolean);
 
   return (
     <>
@@ -44,11 +45,8 @@ export default function ProjectDetails() {
             ← All projects
           </Link>
           <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">{project.title}</h1>
-          <p className="mt-4 text-lg text-white/80">
-            {project.category} · {project.location} · {project.status}
-          </p>
-          {project.isSample ? (
-            <p className="mt-4 inline-block bg-gold px-3 py-1 font-semibold text-ink">Sample placeholder project</p>
+          {metaParts.length > 0 ? (
+            <p className="mt-4 text-lg text-white/80">{metaParts.join(' · ')}</p>
           ) : null}
         </div>
       </section>
@@ -70,14 +68,18 @@ export default function ProjectDetails() {
                 <dt className="text-sm font-semibold tracking-wide text-muted">Category</dt>
                 <dd className="text-lg">{project.category}</dd>
               </div>
-              <div>
-                <dt className="text-sm font-semibold tracking-wide text-muted">Location</dt>
-                <dd className="text-lg">{project.location}</dd>
-              </div>
-              <div>
-                <dt className="text-sm font-semibold tracking-wide text-muted">Status</dt>
-                <dd className="text-lg">{project.status}</dd>
-              </div>
+              {project.location ? (
+                <div>
+                  <dt className="text-sm font-semibold tracking-wide text-muted">Location</dt>
+                  <dd className="text-lg">{project.location}</dd>
+                </div>
+              ) : null}
+              {project.status ? (
+                <div>
+                  <dt className="text-sm font-semibold tracking-wide text-muted">Status</dt>
+                  <dd className="text-lg">{project.status}</dd>
+                </div>
+              ) : null}
             </dl>
             <Button to="/contact" className="mt-8 w-full">
               Enquire About a Similar Project

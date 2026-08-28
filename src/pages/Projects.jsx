@@ -6,7 +6,7 @@ export default function Projects() {
   useSeo({
     title: 'Projects | KS Construction',
     description:
-      'Explore sample construction project presentations from KS Construction. Replace with real project photography as work is completed.',
+      'Explore residential, villa, commercial and renovation projects from KS Construction.',
   });
 
   return (

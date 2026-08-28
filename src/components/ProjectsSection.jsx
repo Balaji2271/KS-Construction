@@ -21,10 +21,6 @@ export default function ProjectsSection({ showFilters = false, limit }) {
           title="Our Projects"
           subtitle="Explore our work and construction projects."
         />
-        <p className="mt-4 max-w-3xl border-l-2 border-gold bg-white px-4 py-3 text-muted">
-          Sample photography is shown until real KS Construction project photos are added. Replace items in{' '}
-          <span className="font-semibold text-ink">src/data/projects.js</span>.
-        </p>
 
         {showFilters ? (
           <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Project categories">
