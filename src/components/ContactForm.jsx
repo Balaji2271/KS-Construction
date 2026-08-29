@@ -23,7 +23,8 @@ const initial = {
 
 function isValidPhone(value) {
   const digits = value.replace(/\D/g, '');
-  return digits.length >= 10 && digits.length <= 13;
+  // Accept 10-digit Indian numbers, or 12-digit with country code 91.
+  return digits.length === 10 || (digits.length === 12 && digits.startsWith('91'));
 }
 
 function isValidEmail(value) {

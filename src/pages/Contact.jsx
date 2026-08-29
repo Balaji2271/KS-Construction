@@ -7,7 +7,7 @@ export default function Contact() {
   useSeo({
     title: 'Contact KS Construction | Get a Quote',
     description:
-      'Call, WhatsApp or send an enquiry to KS Construction. Phone 8940740558. Let’s discuss your construction requirements.',
+      'Call, WhatsApp or send an enquiry to KS Construction. Phone +91 8940740558. Let’s discuss your construction requirements.',
   });
 
   return (

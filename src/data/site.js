@@ -2,7 +2,7 @@ export const COMPANY = {
   name: 'KS Construction',
   tagline: 'Building Dreams. Creating Spaces.',
   navTagline: 'BUILDING DREAMS • CREATING SPACES',
-  phoneDisplay: '8940740558',
+  phoneDisplay: '+91 8940740558',
   phoneTel: 'tel:+918940740558',
   whatsappUrl: 'https://wa.me/918940740558',
   email: null,
