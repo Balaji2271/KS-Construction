@@ -1,4 +1,7 @@
-import logo from './logo/ks-construction-logo.jpg';
+import logoOriginal from './logo/ks-construction-logo.jpg';
+import logoNav from './logo/ks-construction-logo-nav.jpg';
+import logoFull from './logo/ks-construction-logo-full.jpg';
+import logoMark from './logo/ks-construction-mark.jpg';
 import heroVilla from './hero/villa-night.jpg';
 import aboutResidence from './about/modern-residence.jpg';
 import ctaDetail from './cta/construction-detail.jpg';
@@ -32,7 +35,10 @@ import galleryCommercial01 from './gallery/commercial-01.jpg';
 import galleryPlanning01 from './gallery/planning-01.jpg';
 
 export const images = {
-  logo,
+  logo: logoOriginal,
+  logoNav,
+  logoFull,
+  logoMark,
   hero: {
     villa: heroVilla,
   },

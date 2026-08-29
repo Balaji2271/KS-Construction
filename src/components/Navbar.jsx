@@ -11,10 +11,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const reduce = useReducedMotion();
-  const darkHero = !scrolled && !open;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -33,29 +32,29 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open
-          ? 'border-b border-black/5 bg-white/97 shadow-nav backdrop-blur-md'
-          : 'bg-transparent'
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-white/95 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled || open ? 'border-black/8 shadow-nav' : 'border-black/5'
       }`}
     >
-      <div className="container-site flex h-[80px] items-center justify-between gap-4 lg:h-[92px]">
+      <div className="container-site flex h-[72px] items-center justify-between gap-3 sm:h-[80px] lg:h-[88px]">
         <Link to="/" aria-label="KS Construction home" className="relative z-10 shrink-0">
-          <Logo variant={darkHero && !open ? 'light' : 'dark'} />
+          {/* Full lockup on sm+, compact mark on very small phones */}
+          <span className="hidden min-[380px]:inline">
+            <Logo variant="nav" />
+          </span>
+          <span className="inline min-[380px]:hidden">
+            <Logo variant="mark" />
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-7 xl:gap-8 lg:flex" aria-label="Primary">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
                 `text-[15px] font-semibold tracking-wide transition ${
-                  isActive
-                    ? 'text-gold'
-                    : darkHero
-                      ? 'text-white hover:text-gold-light'
-                      : 'text-ink hover:text-gold'
+                  isActive ? 'text-gold' : 'text-ink hover:text-gold'
                 }`
               }
             >
@@ -67,9 +66,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={COMPANY.phoneTel}
-            className={`inline-flex min-h-12 items-center gap-2 text-[15px] font-semibold ${
-              darkHero ? 'text-white' : 'text-ink'
-            }`}
+            className="inline-flex min-h-12 items-center gap-2 text-[15px] font-semibold text-ink"
           >
             <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
             {COMPANY.phoneDisplay}
@@ -81,9 +78,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className={`inline-flex h-12 w-12 items-center justify-center rounded-sm lg:hidden ${
-            darkHero && !open ? 'text-white' : 'text-ink'
-          }`}
+          className="inline-flex h-12 w-12 items-center justify-center rounded-sm text-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? 'Close menu' : 'Open menu'}

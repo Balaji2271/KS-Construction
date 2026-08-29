@@ -8,11 +8,10 @@ export default function Footer() {
     <footer className="bg-ink pb-24 text-white lg:pb-0">
       <div className="container-site grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <Logo variant="light" className="max-w-[260px]" />
+          <div className="inline-block rounded-sm bg-white p-3">
+            <Logo variant="full" />
+          </div>
           <p className="mt-5 max-w-sm text-lg leading-relaxed text-white/80">
-            Building Dreams. Creating Spaces.
-          </p>
-          <p className="mt-3 text-white/70">
             Quality construction solutions designed around your vision, requirements and budget.
           </p>
         </div>
