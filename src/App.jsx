@@ -4,13 +4,14 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import MobileContactBar from './components/MobileContactBar.jsx';
+// Eager-load Contact so "Get a Quote" navigates instantly (primary conversion path).
+import Contact from './pages/Contact.jsx';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
 const Services = lazy(() => import('./pages/Services.jsx'));
 const Projects = lazy(() => import('./pages/Projects.jsx'));
 const ProjectDetails = lazy(() => import('./pages/ProjectDetails.jsx'));
-const Contact = lazy(() => import('./pages/Contact.jsx'));
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -30,6 +31,28 @@ function ScrollToTop() {
   return null;
 }
 
+function PrefetchRoutes() {
+  useEffect(() => {
+    const warm = () => {
+      import('./pages/Home.jsx');
+      import('./pages/About.jsx');
+      import('./pages/Services.jsx');
+      import('./pages/Projects.jsx');
+      import('./pages/ProjectDetails.jsx');
+    };
+
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(warm, { timeout: 2000 });
+      return () => window.cancelIdleCallback?.(id);
+    }
+
+    const timer = window.setTimeout(warm, 400);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  return null;
+}
+
 export default function App() {
   return (
     <>
@@ -37,15 +60,10 @@ export default function App() {
         Skip to content
       </a>
       <ScrollToTop />
+      <PrefetchRoutes />
       <Navbar />
       <main id="main">
-        <Suspense
-          fallback={
-            <div className="flex min-h-[50vh] items-center justify-center bg-cream text-lg font-semibold">
-              Loading…
-            </div>
-          }
-        >
+        <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
