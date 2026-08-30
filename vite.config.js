@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// GitHub Pages project site: https://balaji2271.github.io/KS-Construction/
 export default defineConfig({
   plugins: [react()],
-  // Relative asset paths for static / subdirectory hosting.
-  // Pair with HashRouter so /contact links keep working without SPA fallback.
-  base: './',
+  base: '/KS-Construction/',
 });

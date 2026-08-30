@@ -9,14 +9,23 @@ npm install
 npm run dev
 ```
 
-## Production build
+## Deploy (GitHub Pages)
+
+This site is built for:
+
+**https://balaji2271.github.io/KS-Construction/**
+
+On every push to `main`, GitHub Actions builds the Vite app and deploys the `dist/` folder to GitHub Pages.
+
+In the repo settings → **Pages**:
+- Source must be **GitHub Actions** (not “Deploy from a branch”).
+
+Local production check:
 
 ```bash
 npm run build
 npm run preview
 ```
-
-The site is a static frontend (React + Vite + Tailwind CSS). Deploy the `dist/` folder to any static host.
 
 ## Replacing sample content
 
