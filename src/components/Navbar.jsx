@@ -32,8 +32,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b bg-white/95 backdrop-blur-md transition-shadow duration-300 ${
-        scrolled || open ? 'border-black/8 shadow-nav' : 'border-black/5'
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-cream transition-shadow duration-300 ${
+        scrolled || open ? 'border-black/10 shadow-nav' : 'border-black/5'
       }`}
     >
       <div className="container-site flex h-[72px] items-center justify-between gap-3 sm:h-[80px] lg:h-[88px]">
@@ -96,7 +96,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { height: 0, opacity: 0 }}
             transition={{ duration: 0.28 }}
-            className="overflow-hidden border-t border-black/5 bg-white lg:hidden"
+            className="overflow-hidden border-t border-black/5 bg-cream lg:hidden"
           >
             <nav className="container-site flex flex-col py-4" aria-label="Mobile">
               {NAV_LINKS.map((link) => (

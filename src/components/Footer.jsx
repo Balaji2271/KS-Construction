@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-ink pb-24 text-white lg:pb-0">
       <div className="container-site grid gap-12 py-16 md:grid-cols-3">
         <div>
-          <div className="inline-block rounded-sm bg-white p-3">
+          <div className="inline-block rounded-sm bg-cream p-3">
             <Logo variant="full" />
           </div>
           <p className="mt-5 max-w-sm text-lg leading-relaxed text-white/80">
