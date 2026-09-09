@@ -34,6 +34,8 @@ npm run preview
 - Services: `src/data/services.js`
 - Projects: `src/data/projects.js`
 - Gallery: `src/data/gallery.js`
+- Testimonials: `src/data/testimonials.js`
+- FAQs: `src/data/faqs.js`
 - Contact details: `src/data/site.js`
 
-Project and gallery items marked as sample placeholders should be replaced with real KS Construction photography when available.
+Replace testimonials with real client quotes and permission when available.

@@ -1,5 +1,6 @@
 import { MessageCircle, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm.jsx';
+import FAQSection from '../components/FAQSection.jsx';
 import { COMPANY } from '../data/site';
 import useSeo from '../hooks/useSeo.js';
 
@@ -60,6 +61,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <FAQSection />
     </>
   );
 }

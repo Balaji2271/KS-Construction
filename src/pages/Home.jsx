@@ -1,10 +1,13 @@
 import AboutPreview from '../components/AboutPreview.jsx';
+import ConsultationSteps from '../components/ConsultationSteps.jsx';
 import CTASection from '../components/CTASection.jsx';
+import FAQSection from '../components/FAQSection.jsx';
 import Gallery from '../components/Gallery.jsx';
 import Hero from '../components/Hero.jsx';
 import ProcessTimeline from '../components/ProcessTimeline.jsx';
 import ProjectsSection from '../components/ProjectsSection.jsx';
 import ServicesSection from '../components/ServicesSection.jsx';
+import Testimonials from '../components/Testimonials.jsx';
 import TrustPoints from '../components/TrustPoints.jsx';
 import WhyChooseUs from '../components/WhyChooseUs.jsx';
 import useSeo from '../hooks/useSeo.js';
@@ -25,6 +28,9 @@ export default function Home() {
       <ProjectsSection limit={3} />
       <WhyChooseUs />
       <ProcessTimeline />
+      <Testimonials />
+      <ConsultationSteps />
+      <FAQSection />
       <Gallery />
       <CTASection />
     </>
