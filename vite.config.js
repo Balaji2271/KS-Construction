@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// GitHub Pages project site: https://balaji2271.github.io/KS-Construction/
+// Dynamic base path:
+// - GitHub Pages (via GitHub Actions): '/KS-Construction/'
+// - Vercel / Netlify / Custom Domain / Local: '/'
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+const basePath = process.env.BASE_PATH || (isGitHubPages ? '/KS-Construction/' : '/');
+
 export default defineConfig({
   plugins: [react()],
-  base: '/KS-Construction/',
+  base: basePath,
 });
