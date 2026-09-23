@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { COMPANY } from '../data/site';
 import Button from './Button.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 const projectTypes = [
   'Residential Construction',
@@ -8,7 +9,6 @@ const projectTypes = [
   'Commercial Construction',
   'Renovation & Remodeling',
   'Interior & Finishing',
-  'Turnkey Construction',
   'Other',
 ];
 
@@ -86,6 +86,7 @@ export default function ContactForm() {
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Button href={COMPANY.whatsappUrl} target="_blank" rel="noreferrer">
+            <WhatsAppIcon className="h-5 w-5" />
             Open WhatsApp
           </Button>
           <Button href={COMPANY.phoneTel} variant="dark">

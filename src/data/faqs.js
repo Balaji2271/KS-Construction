@@ -3,7 +3,7 @@ export const faqs = [
     id: 'faq-1',
     question: 'What types of construction projects do you take up?',
     answer:
-      'We work on residential homes, villas, commercial spaces, renovation and remodeling, interior finishing and turnkey construction support.',
+      'We work on residential homes, villas, commercial spaces, renovation and remodeling, and interior finishing.',
   },
   {
     id: 'faq-2',
@@ -31,9 +31,9 @@ export const faqs = [
   },
   {
     id: 'faq-6',
-    question: 'Do you offer turnkey construction?',
+    question: 'How do you ensure structural quality and timeline adherence?',
     answer:
-      'Yes. Turnkey support covers coordinated work from planning and execution through finishing and final handover.',
+      'We follow stage-wise milestone planning, rigorous on-site supervision by our civil engineers, and use tested, quality-certified construction materials.',
   },
   {
     id: 'faq-7',

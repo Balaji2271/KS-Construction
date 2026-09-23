@@ -51,6 +51,7 @@ export const services = [
     image: images.services.interior,
     icon: 'Paintbrush',
   },
+  /*
   {
     id: 'turnkey-construction',
     number: '06',
@@ -61,4 +62,5 @@ export const services = [
     image: images.services.turnkey,
     icon: 'KeyRound',
   },
+  */
 ];

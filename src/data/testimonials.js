@@ -5,34 +5,32 @@
 export const testimonials = [
   {
     id: 't1',
+    project: 'G+1 Independent Residence (2,100 sq.ft)',
+    tag: 'On-Time Handover',
     quote:
-      'The team listened carefully to what we needed for our home and explained each stage clearly before work moved ahead.',
-    name: 'Priya',
-    role: 'Homeowner',
-    focus: 'Residential',
+      'For our family, timeline discipline was the biggest relief. We had heard so many contractor delay stories, but KS Construction stuck strictly to their committed schedule from the foundation stage to our housewarming. The stage-wise milestone payments were completely transparent with zero surprise cost escalations, and curing was given top priority.',
+    name: 'Vignesh & Deepa',
+    role: 'Homeowners',
+    location: 'Independent House',
   },
   {
     id: 't2',
+    project: 'Modern 4BHK Duplex Villa (3,400 sq.ft)',
+    tag: 'Structural Engineering',
     quote:
-      'Planning and estimation were discussed openly. We always knew what was happening on site and what was coming next.',
-    name: 'Arun',
-    role: 'Villa Owner',
-    focus: 'Villa',
+      'Building a custom villa requires meticulous engineering, and Engineer Vijay’s daily presence on site made all the difference. He shared regular photo updates during column casting, slab reinforcement, and electrical conduits. Vijay explained the structural drawings patiently and ensured high-grade materials and clean finish lines throughout.',
+    name: 'Dr. Rajesh & Dr. Meera',
+    role: 'Homeowners',
+    location: 'Custom Villa',
   },
   {
     id: 't3',
+    project: 'Custom 3BHK Residence (1,850 sq.ft)',
+    tag: 'Material Quality & Finish',
     quote:
-      'Finishing details were given proper attention. The space feels complete and practical for everyday use.',
-    name: 'Meera',
-    role: 'Homeowner',
-    focus: 'Interior & Finishing',
-  },
-  {
-    id: 't4',
-    quote:
-      'From first discussion to handover, communication stayed simple and reliable. That made the whole process easier for our family.',
-    name: 'Suresh',
-    role: 'Residential Client',
-    focus: 'Turnkey',
+      'Building our dream home with KS Construction gave our family complete peace of mind. Right from soil testing and Bhoomi Pooja to final electrical fittings and terrace waterproofing, every phase was handled with great professionalism. The joinery, tile alignment, and painting finish are exceptional. Our home was built with genuine care.',
+    name: 'Senthil Kumar & Priya',
+    role: 'Homeowners',
+    location: 'Custom Residence',
   },
 ];

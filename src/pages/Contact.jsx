@@ -1,4 +1,5 @@
-import { MessageCircle, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import FAQSection from '../components/FAQSection.jsx';
 import { COMPANY } from '../data/site';
@@ -45,7 +46,7 @@ export default function Contact() {
             >
               <p className="text-sm font-semibold tracking-[0.2em] text-gold">WHATSAPP</p>
               <p className="mt-3 flex items-center gap-3 text-2xl font-semibold">
-                <MessageCircle className="h-6 w-6 text-gold" aria-hidden="true" />
+                <WhatsAppIcon className="h-6 w-6 text-[#25D366]" aria-hidden="true" />
                 Chat with us
               </p>
               <p className="mt-2 text-muted">Send photos, drawings or a short description of your project.</p>

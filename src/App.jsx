@@ -10,8 +10,8 @@ import Contact from './pages/Contact.jsx';
 const Home = lazy(() => import('./pages/Home.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
 const Services = lazy(() => import('./pages/Services.jsx'));
-const Projects = lazy(() => import('./pages/Projects.jsx'));
-const ProjectDetails = lazy(() => import('./pages/ProjectDetails.jsx'));
+// const Projects = lazy(() => import('./pages/Projects.jsx'));
+// const ProjectDetails = lazy(() => import('./pages/ProjectDetails.jsx'));
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -37,8 +37,8 @@ function PrefetchRoutes() {
       import('./pages/Home.jsx');
       import('./pages/About.jsx');
       import('./pages/Services.jsx');
-      import('./pages/Projects.jsx');
-      import('./pages/ProjectDetails.jsx');
+      // import('./pages/Projects.jsx');
+      // import('./pages/ProjectDetails.jsx');
     };
 
     if ('requestIdleCallback' in window) {
@@ -68,8 +68,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:slug" element={<ProjectDetails />} />
+            {/* <Route path="/projects" element={<Projects />} /> */}
+            {/* <Route path="/projects/:slug" element={<ProjectDetails />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

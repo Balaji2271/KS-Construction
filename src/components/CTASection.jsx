@@ -2,6 +2,7 @@ import { Phone } from 'lucide-react';
 import { images } from '../assets/images';
 import { COMPANY } from '../data/site';
 import Button from './Button.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 export default function CTASection() {
   return (
@@ -31,6 +32,7 @@ export default function CTASection() {
             target="_blank"
             rel="noreferrer"
           >
+            <WhatsAppIcon className="h-5 w-5 text-[#25D366]" />
             WhatsApp Us
           </Button>
           <Button to="/contact" variant="secondary" className="min-w-[180px] uppercase tracking-[0.12em]">

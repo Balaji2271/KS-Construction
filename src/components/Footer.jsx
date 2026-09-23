@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
 import { COMPANY, NAV_LINKS } from '../data/site';
 import Logo from './Logo.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 export default function Footer() {
   return (
@@ -42,8 +43,9 @@ export default function Footer() {
             href={COMPANY.whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-2 inline-flex min-h-12 items-center text-lg text-white/85 hover:text-gold"
+            className="mt-2 inline-flex min-h-12 items-center gap-2 text-lg text-white/85 hover:text-gold"
           >
+            <WhatsAppIcon className="h-5 w-5 text-[#25D366]" />
             WhatsApp
           </a>
           <Link to="/contact" className="mt-2 block min-h-12 text-lg text-white/85 hover:text-gold">

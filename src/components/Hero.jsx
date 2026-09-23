@@ -3,6 +3,7 @@ import { Phone } from 'lucide-react';
 import { images } from '../assets/images';
 import { COMPANY } from '../data/site';
 import Button from './Button.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -51,9 +52,9 @@ export default function Hero() {
           className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
         >
           <Button to="/contact">Get a Free Consultation</Button>
-          <Button to="/projects" variant="secondary">
+          {/* <Button to="/projects" variant="secondary">
             View Our Projects
-          </Button>
+          </Button> */}
         </motion.div>
         <motion.div
           initial={reduce ? false : { opacity: 0 }}
@@ -69,8 +70,9 @@ export default function Hero() {
             href={COMPANY.whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-12 items-center font-semibold text-gold-light underline-offset-4 hover:underline"
+            className="inline-flex min-h-12 items-center gap-2 font-semibold text-gold-light underline-offset-4 hover:underline"
           >
+            <WhatsAppIcon className="h-5 w-5 text-[#25D366]" />
             WhatsApp Us
           </a>
         </motion.div>

@@ -9,7 +9,7 @@ export default function Services() {
   useSeo({
     title: 'Construction Services | KS Construction',
     description:
-      'Residential, villa, commercial, renovation, interior finishing and turnkey construction services from KS Construction.',
+      'Residential, villa, commercial, renovation, and interior finishing services from KS Construction.',
   });
 
   return (
